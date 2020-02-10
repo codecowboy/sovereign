@@ -4,9 +4,9 @@
 ################################################################################
 
 # common
-domain: (required)
-main_user_name: (required)
-organization: (required)
+domain: deadsimple.co.uk
+main_user_name: lukemackenzie
+organization: deadsimple
 
 # admin email
 # fail2ban reports will be sent to this address
@@ -19,7 +19,7 @@ mail_virtual_domains:
 mail_virtual_users:
   - account: "{{ main_user_name }}"
     domain: "{{ domain }}"
-    password: TODO
+    password: justar1dedea
     domain_pk_id: 1
 mail_virtual_aliases:
   - source: "root@{{ domain }}"
@@ -37,7 +37,7 @@ mail_virtual_aliases:
 
 # timezone
 # common_timezone will be used in the common and mailserver roles
-common_timezone: 'Etc/UTC'
+common_timezone: 'Europe/London'
 
 # znc
 irc_nick: (required)

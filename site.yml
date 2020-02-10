@@ -12,11 +12,11 @@
     - webmail
     - blog
     - ircbouncer
-    - xmpp
+#    - xmpp
     - owncloud
     - vpn
-    - tarsnap
+ #   - tarsnap
     - news
-    - git
+#  - git
     - readlater
     - monitoring  # Monitoring role should be last. See roles/monitoring/README.md

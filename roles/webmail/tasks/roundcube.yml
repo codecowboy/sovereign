@@ -5,18 +5,22 @@
 - name: Install roundcube dependencies
   apt: pkg={{ item }} state=present
   with_items:
-    - php5
-    - php5-sqlite
-    - php5-mcrypt
-    - php5-gd
-    - php5-pspell
-    - php5-intl
-    - php5-curl
+    - php
+    - php7.2-dev
+    - php-sqlite3
+    - php-xml
+    - php-gd
+    - php-pspell
+    - php-intl
+    - php-curl
+    - php-mbstring
     - aspell
     - aspell-en
   tags:
     - dependencies
 
+# need to install mcrypt as per https://lukasmestan.com/install-mcrypt-extension-in-php7-2/, only put in one php.ini
+# need mbstring
 - name: Clone roundcube
   git: repo=https://github.com/roundcube/roundcubemail.git
        dest=/var/www/roundcube
